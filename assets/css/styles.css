@@ -488,4 +488,9 @@ footer {
   .project-card {
     margin-top: 0.5rem;
   }
+
+  .icon {
+    width: 6.875rem;
+    height: 6.25rem;
+  }
 }
