@@ -10,12 +10,13 @@ scrollUp.addEventListener("click", () => {
 
 var h= screen.height;
 var w= screen.width;
-document.getElementById('petHome').onclick=function(){window.open('./assets/images/petcarehome.png', '_blank' , 'width='+w+', height='+h+'')}
-document.getElementById('petDashboard').onclick=function(){window.open('./assets/images/petcaredashboard.png', '_blank', 'width='+w+', height='+h+'')}
-document.getElementById('petRegister').onclick=function(){window.open('./assets/images/petcareregister.png', '_blank', 'width='+w+', height='+h+'')}
-document.getElementById('musicHome').onclick=function(){window.open('./assets/images/mymusiclibrary.png', '_blank', 'width='+w+', height='+h+'')}
-document.getElementById('musicDashboard').onclick=function(){window.open('./assets/images/mymusiclibrarydashboard.png', '_blank', 'width='+w+', height='+h+'')}
-document.getElementById('musicRegister').onclick=function(){window.open('./assets/images/mymusiclibraryregister.png', '_blank', 'width='+w+', height='+h+'')}
+
+document.getElementById('furnitureHome').onclick=function(){window.open('./assets/images/Screenshot 2024-08-10 at 15.17.03.png', '_blank', 'width='+w+', height='+h+'')}
+document.getElementById('furnitureCatalog').onclick=function(){window.open('./assets/images/Screenshot 2024-08-10 at 15.17.20.png', '_blank', 'width='+w+', height='+h+'')}
+document.getElementById('furnitureDetails').onclick=function(){window.open('./assets/images/Screenshot 2024-08-10 at 15.18.11.png', '_blank', 'width='+w+', height='+h+'')}
+document.getElementById('furnitureCreate').onclick=function(){window.open('./assets/images/Screenshot 2024-08-10 at 15.17.44.png', '_blank', 'width='+w+', height='+h+'')}
+document.getElementById('furnitureMobile').onclick=function(){window.open('./assets/images/Screenshot 2024-08-10 at 15.21.40.png', '_blank', 'width='+w+', height='+h+'')}
+document.getElementById('furnitureMobileMenu').onclick=function(){window.open('./assets/images/Screenshot 2024-08-10 at 15.21.53.png', '_blank', 'width='+w+', height='+h+'')}
 document.getElementById('beerHome').onclick=function(){window.open('./assets/images/Screenshot 2024-02-26 at 11.59.36.png', '_blank', 'width='+w+', height='+h+'')}
 document.getElementById('beerDetails').onclick=function(){window.open('./assets/images/Screenshot 2024-02-26 at 12.00.01.png', '_blank', 'width='+w+', height='+h+'')}
 document.getElementById('beerAccount').onclick=function(){window.open('./assets/images/Screenshot 2024-02-26 at 12.00.51.png', '_blank', 'width='+w+', height='+h+'')}
@@ -34,50 +35,28 @@ document.getElementById('bookShelfForm').onclick=function(){window.open('./asset
 document.getElementById('bookShelfUser').onclick=function(){window.open('./assets/images/bookshelfUser.png', '_blank', 'width='+w+', height='+h+'')}
 
 
-let petCareSlideIndex = 1;
-showPetCareSlides(petCareSlideIndex);
+let furnitureSlideIndex = 1;
+showFurnitureSlides(furnitureSlideIndex);
 
-function plusPetCareSlides(n) {
-  showPetCareSlides(petCareSlideIndex += n);
+function plusFurnitureSlides(n) {
+  showFurnitureSlides(furnitureSlideIndex += n);
 }
 
-function currentPetCareSlide(n) {
-  showPetCareSlides(petCareSlideIndex = n);
+function currentFurnitureSlide(n) {
+  showFurnitureSlides(furnitureSlideIndex = n);
 }
 
-function showPetCareSlides(n) {
+function showFurnitureSlides(n) {
   let i;
-  let petCareSlides = document.getElementsByClassName("petCareSlides");
-  if (n > petCareSlides.length) { petCareSlideIndex = 1 }
-  if (n < 1) { petCareSlideIndex = petCareSlides.length }
-  for (i = 0; i < petCareSlides.length; i++) {
-    petCareSlides[i].style.display = "none";
+  let furnitureSlides = document.getElementsByClassName("furnitureSlides");
+
+  if (n > furnitureSlides.length) { furnitureSlideIndex = 1 }
+  if (n < 1) { furnitureSlideIndex = furnitureSlides.length }
+  for (i = 0; i < furnitureSlides.length; i++) {
+    furnitureSlides[i].style.display = "none";
   }
 
-  petCareSlides[petCareSlideIndex - 1].style.display = "block";
-}
-
-let musicLibrarySlideIndex = 1;
-showMusicLibrarySlides(musicLibrarySlideIndex);
-
-function plusMusicLibrarySlides(n) {
-  showMusicLibrarySlides(musicLibrarySlideIndex += n);
-}
-
-function currentMusicLibrarySlide(n) {
-  showMusicLibrarySlides(musicLibrarySlideIndex = n);
-}
-
-function showMusicLibrarySlides(n) {
-  let i;
-  let musicLibrarySlides = document.getElementsByClassName("musicLibrarySlides");
-  if (n > musicLibrarySlides.length) { musicLibrarySlideIndex = 1 }
-  if (n < 1) { musicLibrarySlideIndex = musicLibrarySlides.length }
-  for (i = 0; i < musicLibrarySlides.length; i++) {
-    musicLibrarySlides[i].style.display = "none";
-  }
-
-  musicLibrarySlides[musicLibrarySlideIndex - 1].style.display = "block";
+  furnitureSlides[furnitureSlideIndex - 1].style.display = "block";
 }
 
 let beerSlideIndex = 1;

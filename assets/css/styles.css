@@ -485,8 +485,13 @@ footer {
   .project-container {
     margin-bottom: 0rem;
   }
+
   .project-card {
     margin-top: 0.5rem;
+  }
+
+  .project-link {
+    padding-bottom: 1%;
   }
 
   .icon {
